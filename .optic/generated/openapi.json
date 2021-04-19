@@ -1,0 +1,269 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+        "title": "Movies API",
+        "version": "121"
+    },
+    "paths": {
+        "/": {
+            "get": {
+                "operationId": "request_Wr5uZ2sHr1",
+                "summary": "HomePage",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "text/html": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "description": ""
+                    }
+                }
+            },
+            "parameters": []
+        },
+        "/addMovie": {
+            "post": {
+                "operationId": "request_b9Qmz1rYf0",
+                "summary": "Adds New Movie Resource",
+                "requestBody": {
+                    "content": {
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "required": [
+                                        "__v",
+                                        "_id",
+                                        "name",
+                                        "plot",
+                                        "year"
+                                    ],
+                                    "properties": {
+                                        "name": {
+                                            "type": "string"
+                                        },
+                                        "plot": {
+                                            "type": "string"
+                                        },
+                                        "_id": {
+                                            "type": "string"
+                                        },
+                                        "year": {
+                                            "type": "number"
+                                        },
+                                        "__v": {
+                                            "type": "number"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "description": ""
+                    }
+                }
+            },
+            "parameters": []
+        },
+        "/movie/{movieId}": {
+            "delete": {
+                "operationId": "request_vAWjNR8qHD",
+                "summary": "Deletes Movie By Id.",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "required": [
+                                        "__v",
+                                        "_id",
+                                        "name",
+                                        "plot",
+                                        "year"
+                                    ],
+                                    "properties": {
+                                        "name": {
+                                            "type": "string"
+                                        },
+                                        "plot": {
+                                            "type": "string"
+                                        },
+                                        "_id": {
+                                            "type": "string"
+                                        },
+                                        "year": {
+                                            "type": "number"
+                                        },
+                                        "__v": {
+                                            "type": "number"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "description": ""
+                    }
+                }
+            },
+            "get": {
+                "operationId": "request_TPHExU95vz",
+                "summary": "Lists Movie By Id.",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "required": [
+                                        "__v",
+                                        "_id",
+                                        "name",
+                                        "plot",
+                                        "year"
+                                    ],
+                                    "properties": {
+                                        "name": {
+                                            "type": "string"
+                                        },
+                                        "plot": {
+                                            "type": "string"
+                                        },
+                                        "_id": {
+                                            "type": "string"
+                                        },
+                                        "year": {
+                                            "type": "number"
+                                        },
+                                        "__v": {
+                                            "type": "number"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "description": ""
+                    }
+                }
+            },
+            "put": {
+                "operationId": "request_7Tj8Z1ldUa",
+                "summary": "Updates Movie By Id",
+                "requestBody": {
+                    "content": {
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "required": [
+                                        "__v",
+                                        "_id",
+                                        "name",
+                                        "plot",
+                                        "year"
+                                    ],
+                                    "properties": {
+                                        "name": {
+                                            "type": "string"
+                                        },
+                                        "plot": {
+                                            "type": "string"
+                                        },
+                                        "_id": {
+                                            "type": "string"
+                                        },
+                                        "year": {
+                                            "type": "number"
+                                        },
+                                        "__v": {
+                                            "type": "number"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "description": ""
+                    }
+                }
+            },
+            "parameters": [{
+                "in": "path",
+                "name": "movieId",
+                "required": true,
+                "schema": {
+                    "type": "string"
+                }
+            }]
+        },
+        "/movies": {
+            "get": {
+                "operationId": "request_J17mHq2zru",
+                "summary": "Lists All Movies",
+                "description": "Lists All the Movies available in the database.",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "required": [
+                                            "__v",
+                                            "_id",
+                                            "name",
+                                            "plot",
+                                            "year"
+                                        ],
+                                        "properties": {
+                                            "name": {
+                                                "type": "string"
+                                            },
+                                            "plot": {
+                                                "type": "string"
+                                            },
+                                            "_id": {
+                                                "type": "string"
+                                            },
+                                            "year": {
+                                                "type": "number"
+                                            },
+                                            "__v": {
+                                                "type": "number"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "description": ""
+                    }
+                }
+            },
+            "parameters": []
+        }
+    },
+    "components": {
+        "schemas": {}
+    }
+}

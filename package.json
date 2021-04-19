@@ -1,0 +1,21 @@
+{
+    "name": "hapi-api-optic",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js"
+    },
+    "keywords": [
+        "hapi",
+        "hapi-api",
+        "optic",
+        "useoptic"
+    ],
+    "author": "Ashutosh K Singh",
+    "license": "MIT",
+    "dependencies": {
+        "@hapi/hapi": "^20.1.2",
+        "mongoose": "^5.12.4"
+    }
+}
